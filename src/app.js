@@ -6,7 +6,7 @@ import { rotas } from './rotas.js';
 
 const servidor = express();
 
-let PORT = process.env.PORT;
+let PORTA = process.env.PORTA;
 
 servidor.use(express.json())
 
@@ -15,4 +15,4 @@ rotas(servidor);
 
 
 
-servidor.listen(PORT, () => {console.log(`Porta aberta: ${PORT}`)});
+servidor.listen(PORTA, () => {console.log(`Porta aberta: ${PORTA}`)});
