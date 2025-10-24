@@ -6,6 +6,8 @@ import { gerarToken } from "../services/jwt.js";
 
 const endPoints = Router();
 
+//POST - cadastrar usuario
+
 endPoints.post('/usuario/cadastro', async (req, resp) => {
 
     try{
@@ -31,6 +33,8 @@ endPoints.post('/usuario/cadastro', async (req, resp) => {
         console.error('Falhou', err);
     }
 });
+
+//POST - login de usuario (retorna um token)
 
 endPoints.post('/usuario/login', async(req, resp) => {
 

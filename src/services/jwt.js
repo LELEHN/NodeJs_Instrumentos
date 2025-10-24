@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken';
 
 const SECRET_KEY = 'ehSegredo';
 
+//gera um token no momento do login
+
 export function gerarToken(usuario) {
 
     const token = jwt.sign({
@@ -15,6 +17,7 @@ export function gerarToken(usuario) {
 
 }
 
+// verifica se o token é valido e decodifica ele
 
 export function verificarToken(token){
     try{
@@ -25,6 +28,8 @@ export function verificarToken(token){
         throw new Error('token invalido ou expirado');
     }
 }
+
+// Apenas decodifica o token, sem verificar se eé valido
 
 export function decodificarToken(token){
 

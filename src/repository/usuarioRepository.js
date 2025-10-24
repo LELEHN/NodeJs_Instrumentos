@@ -13,7 +13,7 @@ export async function cadastrarUsuario(usuario) {
 
 export async function verificalUsuario(usuario) {
 
-    // ✅ Adicionar id_usuario AS id
+    // Adicionar id_usuario AS id
     let comando = `SELECT id_usuario AS id, nome, email 
                    FROM usuario 
                    WHERE email = ? AND senha = MD5(?)`;

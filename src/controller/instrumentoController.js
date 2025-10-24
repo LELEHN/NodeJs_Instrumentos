@@ -188,4 +188,6 @@ endPoints.delete('/instrumento/:id', autenticar, async (req, resp) => {
     }
 });
 
+
+
 export default endPoints;
